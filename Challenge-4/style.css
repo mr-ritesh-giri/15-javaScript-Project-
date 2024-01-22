@@ -17,22 +17,68 @@ nav {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
+
 .logo {
   font-size: 1.5rem;
-}
-.menu {
   display: flex;
-  list-style: none;
-  gap: 50px;
-  font-size: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  text-shadow: 10px 10px 10px rgba(1, 1, 1, 0.2);
+}
+.adict {
+  color: #5286ce;
 }
 .links {
+  font-size: 1.6rem;
   display: flex;
-  list-style: none;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
-  font-size: 1.7rem;
+  list-style: none;
 }
-.adict{
-    color: #5286ce;
+.social-links {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+@media screen and (min-width: 1350px) {
+  .toggle-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 1349px) {
+  .links {
+    display: none;
+  }
+  .social-links {
+    display: none;
+  }
+  .af-re {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-shadow: 10px 10px 10px rgba(1, 1, 1, 0.2);
+  }
+  .toggle-btn:hover {
+    transform: rotate(90deg);
+  }
+  .toggle-btn {
+    font-size: 1.9rem;
+    color: black;
+    background-color: transparent;
+    border: none;
+    transform: rotate(180deg);
+    transition: transform 0.3s;
+  }
+  .toggle-btn:hover {
+    transform: rotate(90deg);
+  }
 }
