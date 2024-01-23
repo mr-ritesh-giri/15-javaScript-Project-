@@ -9,9 +9,10 @@ body {
   height: 100%;
 }
 main {
-  background-image: url("./Image/modal\ bg.jpeg");
+  background-image: url("./Image/modal bg.jpeg");
   height: 100vh;
   width: 100%;
+  position: absolute;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -22,19 +23,66 @@ main {
 .centre {
   background-color: white;
   text-align: center;
-  padding: 60px;
+  padding: 40px;
   border-radius: 30px;
+  width: 70vh;
 }
 .centre > h1 {
   font-size: 4rem;
+  letter-spacing: 5px;
 }
 .centre > button {
-  margin-top: 70px;
-  font-size: 1rem;
+  margin-top: 60px;
+  font-size: 1.7rem;
   font-weight: 600;
-  padding: 13px 18px;
+  letter-spacing: 5px;
+  padding: 15px 22px;
   background: #5286ce;
   color: white;
   border: none;
   border-radius: 15px;
+}
+.centre > button:hover {
+  background: none;
+  border: 4px solid #5286ce;
+  color: #5286ce;
+}
+.main-over {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-color: #5286ce6b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: none;
+  z-index: -10;
+}
+.main-overlay {
+  visibility: visible;
+  z-index: 10;
+}
+.centre-over {
+  background-color: white;
+  padding: 100px;
+  height: 30vh;
+  text-align: center;
+  border-radius: 30px;
+  font-size: 2.6rem;
+  width: 70vh;
+  position: relative;
+}
+.exit {
+  background-color: transparent;
+  border: none;
+  color: red;
+  font-size: 2.5rem;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transform: rotate(90deg);
+  transition: transform 0.2s;
+}
+.exit:hover {
+  transform: rotate(0deg);
 }
