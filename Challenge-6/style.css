@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+main {
+  background-image: url("./Image/modal\ bg.jpeg");
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.centre {
+  background-color: white;
+  text-align: center;
+  padding: 60px;
+  border-radius: 30px;
+}
+.centre > h1 {
+  font-size: 4rem;
+}
+.centre > button {
+  margin-top: 70px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 13px 18px;
+  background: #5286ce;
+  color: white;
+  border: none;
+  border-radius: 15px;
+}

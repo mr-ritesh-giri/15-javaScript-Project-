@@ -3,40 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Navbar</title>
+    <title>Sidebar</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <nav>
-      <div class="nav-center">
-        <div class="nav-header">
-          <h3>Coding <span class="agent">Agent</span></h3>
-          <button class="nav-toggle">
-            <i class="fas fa-bars"></i>
-          </button>
-        </div>
-
+    <main>
+      <button class="bar-btn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <aside>
+        <header>
+          <div class="logo">Coding <span class="agent">Agent</span></div>
+          <div class="exit"><i class="fa-solid fa-xmark"></i></div>
+        </header>
+        <!-- links -->
         <ul class="links">
           <li>
-            <a href="index.html">home</a>
+            <a href="index.html">HOME</a>
           </li>
           <li>
-            <a href="about.html">about</a>
+            <a href="about.html">ABOUT</a>
           </li>
           <li>
-            <a href="projects.html">projects</a>
+            <a href="projects.html">PROJECTS</a>
           </li>
           <li>
-            <a href="contact.html">contact</a>
+            <a href="contact.html">CONTACT</a>
           </li>
         </ul>
-
-        <ul class="social-icons">
+        <!-- social media -->
+        <ul class="social-links">
           <li>
             <a href="https://www.twitter.com">
               <i class="fab fa-facebook"></i>
@@ -63,10 +59,12 @@
             </a>
           </li>
         </ul>
-      </div>
-    </nav>
-
+      </aside>
+    </main>
+    <script
+      src="https://kit.fontawesome.com/710eb4308b.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>
-;
