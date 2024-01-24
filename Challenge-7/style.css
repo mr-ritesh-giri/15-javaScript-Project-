@@ -39,6 +39,7 @@ h1 {
 .horizontal-line {
   max-width: 65vh;
   margin: 0 auto;
+  margin-bottom: 20px;
 }
 .faq-box {
   width: 70vh;
@@ -47,7 +48,6 @@ h1 {
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
 .info {
-  padding-top: 30px;
   padding-bottom: 30px;
   color: rgb(85, 80, 80);
   font-size: 0.8rem;
@@ -62,17 +62,13 @@ h1 {
   border: none;
   font-size: 1.8rem;
   color: #c59e61;
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in-out;
+}
+.see-more:hover {
+  transform: rotate(0deg);
 }
 h3 {
   font-size: 1.7rem;
   color: black;
-}
-
-/* Toggle Btns */
-
-.minus-btn {
-  display: none;
-}
-.plus-btn {
-  display: inline;
 }
