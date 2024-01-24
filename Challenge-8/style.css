@@ -5,6 +5,122 @@
 }
 html,
 body {
-  height: 100%;
+  height: 200vh;
   width: 100%;
+  background-color: rgba(187, 187, 201, 0.418);
 }
+main {
+  max-width: 1340px;
+  margin: 0 auto;
+}
+.top-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 170px;
+}
+.top-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+.title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+.underline {
+  border-bottom: 3px solid #c59e61;
+  width: 100px;
+  margin: 0 auto;
+}
+.top-btns > button {
+  background-color: transparent;
+  color: #c59e61;
+  border: 2px solid #c59e61;
+  padding: 5px;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 1rem;
+  margin-bottom: 100px;
+}
+
+/* Menu Section */
+.menu-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+.img {
+  width: 270px;
+  height: 180px;
+  border: 2px solid #c59e61;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.img > img {
+  width: 100%;
+  height: 100%;
+}
+.menu-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  font-size: 1.2rem;
+}
+.menu-top {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  border-bottom: 1px solid black;
+}
+.menu-right-data {
+  display: flex;
+  flex-direction: column;
+  width: 30vh;
+}
+h3 {
+  font-weight: 00;
+
+  margin-bottom: 13px;
+}
+.dish-price {
+  color: #c59e61;
+  font-weight: 600;
+}
+.dish-context {
+  padding-top: 10px;
+}
+/* 
+window.addEventListener("click", function () {
+  displayMenuItems(menu);
+});
+function displayMenuItems(menuItems) {
+  let displayMenu = menuItems.map(function (item) {
+    return `<div class="menu-content">
+        <div class="img">
+          <img src="${item.img}" alt="${item.title}" />
+        </div>
+        <div class="menu-right-data">
+          <div class="menu-top">
+            <div class="dish-title">
+              <h3 id="title">${item.title}</h3>
+            </div>
+            <div class="dish-price" id="price">$${item.price}</div>
+            <div class="base-line"></div>
+          </div>
+          <div class="dish-context">
+            <p>
+            ${item.desc}
+            </p>
+          </div>
+        </div>
+      </div>`;
+  });
+  displayMenu = displayMenu.join("");
+  menuSection.innerHTML = displayMenu;
+}
+
+*/

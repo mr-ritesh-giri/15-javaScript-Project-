@@ -23,13 +23,15 @@ h1 {
   font-style: normal;
   font-size: 3.3rem;
 }
+
 .container {
   color: #c59e61;
 }
 .main-readme {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding: 20px 40px;
   margin-top: 40px;
   height: 9vh;
   width: 100%;
