@@ -74,8 +74,27 @@ const menu = [
 ];
 
 const menuSection = document.querySelector(".menu-section");
+const filterBtns = document.querySelectorAll(".filter-btn");
 
+//Load Items
 displayMenuItems(menu);
+
+//Filter Items
+filterBtns.forEach(function (btns) {
+  btns.addEventListener("click", function (e) {
+    const category = e.currentTarget.dataset.id;
+    const menuCategory = menu.filter(function (menuItem) {
+      if (menuItem.category === category) {
+        return menuItem;
+      }
+    });
+    if (category === "all") {
+      displayMenuItems(menu);
+    } else {
+      displayMenuItems(menuCategory);
+    }
+  });
+});
 
 function displayMenuItems(menuItems) {
   let displayItems = menuItems.map(function (item) {

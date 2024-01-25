@@ -45,7 +45,11 @@ main {
   font-size: 1rem;
   margin-bottom: 100px;
 }
-
+.top-btns > button:hover {
+  background-color: #c59e61;
+  color: aliceblue;
+  transition: all 0.2s ease-in-out;
+}
 /* Menu Section */
 .menu-section {
   display: flex;
@@ -93,34 +97,3 @@ h3 {
 .dish-context {
   padding-top: 10px;
 }
-/* 
-window.addEventListener("click", function () {
-  displayMenuItems(menu);
-});
-function displayMenuItems(menuItems) {
-  let displayMenu = menuItems.map(function (item) {
-    return `<div class="menu-content">
-        <div class="img">
-          <img src="${item.img}" alt="${item.title}" />
-        </div>
-        <div class="menu-right-data">
-          <div class="menu-top">
-            <div class="dish-title">
-              <h3 id="title">${item.title}</h3>
-            </div>
-            <div class="dish-price" id="price">$${item.price}</div>
-            <div class="base-line"></div>
-          </div>
-          <div class="dish-context">
-            <p>
-            ${item.desc}
-            </p>
-          </div>
-        </div>
-      </div>`;
-  });
-  displayMenu = displayMenu.join("");
-  menuSection.innerHTML = displayMenu;
-}
-
-*/
