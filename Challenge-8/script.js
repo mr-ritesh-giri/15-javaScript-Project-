@@ -71,11 +71,53 @@ const menu = [
     img: "./images/item-9.jpeg",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
+  {
+    id: 10,
+    title: "steak delight",
+    category: "dinner",
+    price: 39.99,
+    img: "./images/item-10.jpeg",
+    desc: `
+    A succulent and savory delight, steak is a premium cut of beef celebrated for its rich flavor, tender texture, and mouthwatering juiciness.`,
+  },
 ];
 
 const menuSection = document.querySelector(".menu-section");
+const topBtns = document.querySelector(".top-btns");
 
+// Extract unique categories from the menu
+const categories = ["all", ...new Set(menu.map((item) => item.category))];
+
+
+// Dynamically generate buttons
+const buttons = categories.map((category) => {
+  return `<button class="filter-btn" data-id="${category}">${
+    category.charAt(0).toUpperCase() + category.slice(1)
+  }</button>`;
+});
+
+// Add buttons to the topBtns element
+topBtns.innerHTML = buttons.join("");
+
+// Load Items
 displayMenuItems(menu);
+
+// Filter Items
+topBtns.addEventListener("click", function (e) {
+  if (e.target.tagName === "BUTTON") {
+    const category = e.target.dataset.id;
+    const menuCategory = menu.filter(function (menuItem) {
+      if (menuItem.category === category) {
+        return menuItem;
+      }
+    });
+    if (category === "all") {
+      displayMenuItems(menu);
+    } else {
+      displayMenuItems(menuCategory);
+    }
+  }
+});
 
 function displayMenuItems(menuItems) {
   let displayItems = menuItems.map(function (item) {
@@ -99,6 +141,7 @@ function displayMenuItems(menuItems) {
             </div>
           </div>`;
   });
+
   displayItems = displayItems.join("");
   menuSection.innerHTML = displayItems;
 }
