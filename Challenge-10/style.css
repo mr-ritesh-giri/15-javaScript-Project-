@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+nav {
+  max-width: 1440px;
+  margin: auto;
+}
+.nav-centre {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.nav-logo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-logo > .nav-toggle {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+}
+.logo {
+  width: 110px;
+  height: 110px;
+}
+.links-container > ul > li > a {
+  text-decoration: none;
+  color: black;
+}
+.links-container > ul > li {
+  list-style: none;
+  font-size: 1.5rem;
+}
+.links-container > ul {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+.links-container {
+  display: none;
+}
+.links > li > a:hover {
+  color: #4bd1d5;
+  transition: all 0.2s ease-in-out;
+}
+.banner {
+  height: 100vh;
+  width: 100%;
+  background-image: url("./images/hero-bcg.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  text-align: center;
+  color: white;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(15, 70, 70, 0.288);
+}
+h1 {
+  font-size: 3.8rem;
+  margin-bottom: 40px;
+}
+.container > p {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  max-width: 1100px;
+}
+.btn-white {
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  font-size: 1.4rem;
+  padding: 10px 18px;
+}
+.btn-white:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  transition: all 0.2s ease-in-out;
+}
+.section {
+  height: 100vh;
+  text-align: center;
+  border: 1px solid black;
+}
+h2 {
+  font-size: 3rem;
+}
+h2 > span {
+  color: #4bd1d5;
+}
+#footer {
+  height: 20vh;
+  background-color: cadetblue;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1199px) {
+  .nav-logo > .nav-toggle {
+    display: flex;
+  }
+}
+@media (min-width: 1200px) {
+  .links-container {
+    display: flex;
+  }
+  .nav-logo > .nav-toggle {
+    display: none;
+  }
+}
