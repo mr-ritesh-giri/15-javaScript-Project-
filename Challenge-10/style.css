@@ -7,17 +7,25 @@ html,
 body {
   width: 100%;
   height: 100%;
+  scroll-behavior: smooth;
 }
-nav {
-  max-width: 1440px;
-  margin: auto;
+main {
+  background-image: url("./images/hero-bcg.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+header {
+  background-color: rgba(15, 70, 70, 0.288);
 }
 .nav-centre {
-  height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 10px 40px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .nav-logo {
   width: 100%;
@@ -28,7 +36,12 @@ nav {
 .nav-logo > .nav-toggle {
   background-color: transparent;
   border: none;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in-out;
+}
+.nav-toggle:hover {
+  transform: rotate(0deg);
 }
 .logo {
   width: 110px;
@@ -47,20 +60,13 @@ nav {
   align-items: center;
   gap: 60px;
 }
-.links-container {
-  display: none;
-}
 .links > li > a:hover {
   color: #4bd1d5;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s linear;
 }
 .banner {
   height: 100vh;
   width: 100%;
-  background-image: url("./images/hero-bcg.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  object-fit: cover;
   text-align: center;
   color: white;
 }
@@ -71,7 +77,6 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(15, 70, 70, 0.288);
 }
 h1 {
   font-size: 3.8rem;
@@ -114,10 +119,53 @@ h2 > span {
   justify-content: center;
   align-items: center;
 }
-
+.top-link {
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  color: white;
+  background-color: #4bd1d5;
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: none;
+  z-index: -100;
+}
+.show-link {
+  visibility: visible;
+  z-index: 100;
+}
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 10px 10px 10px rgba(8, 8, 8, 0.445);
+}
+.top-link > i {
+  font-size: 1.4rem;
+}
+.hide {
+  display: none;
+}
 @media (max-width: 1199px) {
   .nav-logo > .nav-toggle {
     display: flex;
+  }
+  .nav-centre {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: white;
+  }
+  .links {
+    flex-direction: column;
+    margin-top: 22px;
   }
 }
 @media (min-width: 1200px) {
