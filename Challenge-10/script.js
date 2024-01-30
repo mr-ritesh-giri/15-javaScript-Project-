@@ -7,24 +7,54 @@ const toggleBtn = document.querySelector(".nav-toggle");
 
 toggleBtn.addEventListener("click", function () {
   linkContainer.classList.toggle("hide");
+  linkContainer.style.tra;
 });
 
 const navbar = document.querySelector("nav");
-const topLinks = document.querySelector(".top-links");
+const topLink = document.querySelector(".top-link");
 
 window.addEventListener("scroll", function () {
-  const scrollheight = window.pageYOffset;
+  const scrollHeight = window.pageYOffset;
   const navHeight = navbar.getBoundingClientRect().height;
-
-  if (scrollheight > navHeight) {
+  if (scrollHeight > navHeight) {
     navbar.classList.add("fixed-nav");
   } else {
     navbar.classList.remove("fixed-nav");
   }
-
-  if (scrollheight > 1000) {
-    topLinks.classList.add("show-link");
+  if (scrollHeight > 1000) {
+    topLink.classList.add("show-link");
   } else {
-    topLinks.classList.remove("show-link");
+    topLink.classList.remove("show-link");
   }
+});
+
+// Smooth Scroll
+
+const scrollLinks = document.querySelectorAll(".scroll-link");
+scrollLinks.forEach((link) => {
+  link.addEventListener("click", function (e) {
+    // Prevent Default
+    e.preventDefault();
+    // Find the containers
+    const id = e.currentTarget.getAttribute("href").slice(1);
+    const element = document.getElementById(id);
+
+    // Setting the section height
+    const navHeight = navbar.getBoundingClientRect().height;
+    const containerHeight = linkContainer.getBoundingClientRect().height;
+    const fixedNav = navbar.classList.contains("fixed-nav");
+
+    let position = element.offsetTop - navHeight;
+    if (!fixedNav) {
+      position = position - navHeight;
+    }
+    if (navHeight > 130) {
+      position = position + containerHeight;
+    }
+    window.scrollTo({
+      left: 0,
+      top: position,
+    });
+  });
+  linkContainer.style.height = 0;
 });

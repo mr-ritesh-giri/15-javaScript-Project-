@@ -57,7 +57,7 @@ header {
 }
 .links-container > ul {
   display: flex;
-  align-items: center;
+  padding-left: 15px;
   gap: 60px;
 }
 .links > li > a:hover {
