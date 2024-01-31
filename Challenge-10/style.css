@@ -153,7 +153,7 @@ h2 > span {
   display: none;
 }
 @media (max-width: 1199px) {
-  .nav-logo > .nav-toggle {
+  .nav-centre > .nav-logo > .nav-toggle {
     display: flex;
   }
   .nav-centre {
@@ -168,6 +168,7 @@ h2 > span {
     margin-top: 22px;
   }
 }
+
 @media (min-width: 1200px) {
   .links-container {
     display: flex;

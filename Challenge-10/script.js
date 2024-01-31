@@ -55,6 +55,6 @@ scrollLinks.forEach((link) => {
       left: 0,
       top: position,
     });
+    linkContainer.style.height = 0;
   });
-  linkContainer.style.height = 0;
 });
