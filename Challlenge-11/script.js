@@ -1,8 +1,18 @@
-const btns = document.querySelectorAll("#btns");
+const btns = document.querySelectorAll(".tab-btn");
+const article = document.querySelectorAll(".content");
+const about = document.querySelector(".about");
 
-btns.forEach(function (btn) {
-  btn.addEventListener("click", function (e) {
-    const attribute = e.currentTarget.id;
-    console.log(attribute, "clicked");
+about.addEventListener("click", function (e) {
+  const id = e.target.dataset.id;
+  btns.forEach(function (btn) {
+    btn.classList.remove("active");
+    e.target.classList.add("active");
   });
+  article.forEach(function (article) {
+    article.classList.remove("active");
+  });
+  const selectedArticle = document.getElementById(id);
+  if (selectedArticle) {
+    selectedArticle.classList.add("active");
+  }
 });
