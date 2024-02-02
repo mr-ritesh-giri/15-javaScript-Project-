@@ -1,3 +1,4 @@
 {
-    "livePreview.defaultPreviewPath": "/Challlenge-11/index.html"
+  "livePreview.defaultPreviewPath": "/Challlenge-11/index.html",
+  "html-to-css-autocompletion.triggerCharacters": true
 }
