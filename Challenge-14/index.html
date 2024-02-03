@@ -3,19 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Random Lorem</title>
+    <title>Grocery Bud</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main>
       <div id="container">
-        <h1>TIRED OF BORING LOREM IPSUM?</h1>
-        <form id="lorem-from">
-          <label for="amount">Paragraph:</label>
-          <input type="number" name="amount" id="amount" placeholder="5" />
-          <button type="submit" id="generate">GENERATE</button>
+        <form id="grocery-form">
+          <p class="alert"></p>
+          <h1>Grocery Bud</h1>
+          <input type="text" placeholder="e.g. eggs" id="input" />
+          <button type="submit">Submit</button>
         </form>
-        <article id="lorem-text"></article>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <button>Clear Items</button>
       </div>
     </main>
     <script src="script.js"></script>
