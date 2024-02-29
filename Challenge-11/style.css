@@ -239,28 +239,3 @@ About
 .content.active {
   display: block;
 }
-/* 
-const btns = document.querySelectorAll(".tab-btn");
-const about = document.querySelector(".about");
-const article = document.querySelectorAll(".content");
-
-about.addEventListener("click", function (e) {
-  const id = e.target.dataset.id;
-  if (id) {
-    //Remove active classes
-    btns.forEach(function (btn) {
-      btn.classList.remove("active");
-      e.target.classList.add("active");
-    });
-    //hide other articles
-    article.forEach(function (article) {
-      article.classList.remove("active");
-    });
-    const selectArticle = document.getElementById(id);
-    if (selectArticle) {
-      selectArticle.classList.add("active");
-    }
-  }
-});
-
-*/

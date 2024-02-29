@@ -88,7 +88,6 @@ const topBtns = document.querySelector(".top-btns");
 // Extract unique categories from the menu
 const categories = ["all", ...new Set(menu.map((item) => item.category))];
 
-
 // Dynamically generate buttons
 const buttons = categories.map((category) => {
   return `<button class="filter-btn" data-id="${category}">${
