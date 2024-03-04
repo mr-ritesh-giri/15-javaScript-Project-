@@ -1,30 +1,35 @@
-//using selectors inside the element
-const questions = document.querySelectorAll(".question");
+const slider = document.querySelector(".slider-container");
+const prevButton = document.querySelector(".prevBtn");
+const nextButton = document.querySelector(".nextBtn");
 
-questions.forEach(function (question) {
-  const btn = question.querySelector(".question-btn");
-  // console.log(btn);
+function showSlides() {
+  let slideIndex = 0;
 
-  btn.addEventListener("click", function () {
-    // console.log(question);
+  const slides = document.querySelectorAll(".slide");
+  if (slideIndex >= slides.length) {
+    slideIndex = 0;
+  }
+  if (slideIndex < 0) {
+    slideIndex = slides.length - 1;
+  }
+  slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+}
 
-    questions.forEach(function (item) {
-      if (item !== question) {
-        item.classList.remove("show-text");
-      }
-    });
+function prevSlide() {
+  slideIndex--;
+  showSlides();
+}
 
-    question.classList.toggle("show-text");
-  });
+function nextSlide() {
+  slideIndex++;
+  showSlides();
+}
+
+// Add event listeners to buttons
+prevButton.addEventListener("click", function () {
+  console.log("Hi ritesh giri");
 });
+nextButton.addEventListener("click", nextSlide);
 
-// traversing the dom
-// const btns = document.querySelectorAll(".question-btn");
-
-// btns.forEach(function (btn) {
-//   btn.addEventListener("click", function (e) {
-//     const question = e.currentTarget.parentElement.parentElement;
-
-//     question.classList.toggle("show-text");
-//   });
-// });
+// Show initial slide
+showSlides();
